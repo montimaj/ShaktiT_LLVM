@@ -1,0 +1,10 @@
+#ifndef ELF_RELOC
+#error "ELF_RELOC must be defined"
+#endif
+
+ELF_RELOC(R_SHAKTI_NONE,                   0x00)
+ELF_RELOC(R_SHAKTI_ABS32,                  0x01)
+ELF_RELOC(R_SHAKTI_BRANCH20,               0x02)
+ELF_RELOC(R_SHAKTI_BRANCH25,               0x03)
+ELF_RELOC(R_SHAKTI_HI19,                   0x04)
+ELF_RELOC(R_SHAKTI_IMM_LO13,               0x05)

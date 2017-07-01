@@ -1,0 +1,50 @@
+//===-- BuiltinsShakti.def - Shakti Builtin function database --------*- C++ -*-==//
+//
+//                     The LLVM Compiler Infrastructure
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+//
+// This file defines the Shakti-specific builtin function database. Users of
+// this file must define the BUILTIN macro to make use of this information.
+//
+//===----------------------------------------------------------------------===//
+
+// The format of this database matches clang/Basic/Builtins.def.
+
+BUILTIN(__builtin_shakti_read_control_reg, "ii", "n")
+BUILTIN(__builtin_shakti_write_control_reg, "vii", "n")
+BUILTIN(__builtin_shakti_vector_mixi, "V16iUsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_vector_mixf, "V16fUsV16fV16f", "nc")
+BUILTIN(__builtin_shakti_shufflei, "V16iV16iV16i", "nc")
+BUILTIN(__builtin_shakti_shufflef, "V16fV16fV16i", "nc")
+BUILTIN(__builtin_shakti_gather_loadi, "V16iV16i", "n")
+BUILTIN(__builtin_shakti_gather_loadi_masked, "V16iV16iUs", "n")
+BUILTIN(__builtin_shakti_scatter_storei, "vV16iV16i", "n")
+BUILTIN(__builtin_shakti_scatter_storei_masked, "vV16iV16iUs", "n")
+BUILTIN(__builtin_shakti_block_storei_masked, "vV16i*V16iUs", "n")
+BUILTIN(__builtin_shakti_gather_loadf, "V16fV16i", "n")
+BUILTIN(__builtin_shakti_gather_loadf_masked, "V16fV16iUs", "n")
+BUILTIN(__builtin_shakti_scatter_storef, "vV16iV16f", "n")
+BUILTIN(__builtin_shakti_scatter_storef_masked, "vV16iV16fUs", "n")
+BUILTIN(__builtin_shakti_block_storef_masked, "vV16i*V16fUs", "n")
+BUILTIN(__builtin_shakti_mask_cmpi_ugt, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_uge, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_ult, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_ule, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_sgt, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_sge, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_slt, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_sle, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_eq, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpi_ne, "UsV16iV16i", "nc")
+BUILTIN(__builtin_shakti_mask_cmpf_gt, "UsV16fV16f", "nc")
+BUILTIN(__builtin_shakti_mask_cmpf_ge, "UsV16fV16f", "nc")
+BUILTIN(__builtin_shakti_mask_cmpf_lt, "UsV16fV16f", "nc")
+BUILTIN(__builtin_shakti_mask_cmpf_le, "UsV16fV16f", "nc")
+BUILTIN(__builtin_shakti_mask_cmpf_eq, "UsV16fV16f", "nc")
+BUILTIN(__builtin_shakti_mask_cmpf_ne, "UsV16fV16f", "nc")
+
+#undef BUILTIN
