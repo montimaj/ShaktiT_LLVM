@@ -39,3 +39,5 @@ for other distributions:
     $ mkdir build && cd build
     $ cmake -G Ninja ../llvm
     $ ninja
+
+## Special thanks to [Nyuzi](http://nyuzi.org/)
